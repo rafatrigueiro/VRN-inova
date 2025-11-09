@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo - Aventura de Letras</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="carregarDesafio()">
+    <div id="vidas" class="vidas-game" style="font-size: 1.5em; margin-bottom: 10px;"></div>
+  <div class="container-game">
+    <img src="cruzeiro.png" alt="Logo Cruzeiro" class="logo-cruzeiro">
+    <h2 class="titulo-cadastro-game">Aventura de Letras</h2>
+    <p id="pergunta" class="pergunta-game"></p>
+
+    <div class="campo-game">
+      <input type="text" id="resposta" placeholder="Digite sua resposta">
+    </div>
+
+    <button class="btn-principal-game" onclick="verificarResposta()">Responder</button>
+    <p id="feedback" class="feedback-game"></p>
+
+    <div id="botoes-final-jogo" class="botoes-secundarios" style="display: none;">
+      <button class="btn-secundario" onclick="reiniciarJogo()">🔁</button>
+      <a href="menu.html" class="btn-secundario">🏠</a>
+    </div>
+  </div>
+  <audio id="som-acerto" src="acerto.mp3" preload="auto"></audio>
+<audio id="som-erro" src="erro.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
